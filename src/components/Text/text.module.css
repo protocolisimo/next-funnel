@@ -1,0 +1,40 @@
+.base {
+    color: var(--text-default-color);
+    transition: .3s;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.buttonText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0%;
+}
+
+.optionText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.6px;
+    letter-spacing: 0%;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.alternate {
+    color: var(--text-alternate);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+}

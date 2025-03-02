@@ -7,10 +7,11 @@ const HomePage = () => {
   
   useEffect(() => {
     const firstQuestionId = surveyConfig.onboarding[0]?.id;
+
     router.replace(`/survey/${firstQuestionId}`);
   }, [router]);
 
-  return <div>Завантаження опитувальника...</div>;
+  return <div>App loader...</div>;
 };
 
 export default HomePage;

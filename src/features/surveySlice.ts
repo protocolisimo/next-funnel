@@ -7,7 +7,7 @@ interface SurveyState {
 
 const initialState: SurveyState = {
   answers: {},
-  history: [],
+  history: [], //ToDo: fix the history 
 };
 
 const surveySlice = createSlice({
@@ -20,10 +20,7 @@ const surveySlice = createSlice({
     },
     goBack: (state) => {
       if (state.history.length > 0) {
-        const lastQuestion = state.history.pop();
-        if (lastQuestion) {
-          delete state.answers[lastQuestion];
-        }
+        state.history.pop();
       }
     },
     resetSurvey: (state) => {

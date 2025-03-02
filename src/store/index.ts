@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import surveyReducer from "@/features/surveySlice";
+import themeReducer from "@/features/themeSlice";
 
 export const store = configureStore({
   reducer: {
     survey: surveyReducer,
+    theme: themeReducer,
   },
 });
 

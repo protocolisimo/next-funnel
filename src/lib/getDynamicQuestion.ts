@@ -1,17 +1,7 @@
-
-
-type ConfiguredProps = {
-    id: string,
-    type: string,
-    title: string,
-    subtitle?: string,
-    answers: string[],
-    next: string,
-    configuration?: { conditions: Record<string, string[]>, options: Record<string, string>[] }[]
-}
+import { SurveyLayoutProps } from "@/pages/survey/[id]";
 
 export const getDynamicParams = (
-    screen: ConfiguredProps,
+    screen: SurveyLayoutProps,
     answers: Record<string, string[]>
 ) => {
     let configuredScreen = {...screen};
@@ -28,8 +18,8 @@ export const getDynamicParams = (
         });
 
         if (searchedOptions) {
-            searchedOptions.options.forEach((option) => {
-                configuredScreen = { ...configuredScreen, ...option }
+            searchedOptions.values.forEach((value) => {
+                configuredScreen = { ...configuredScreen, ...value }
             })
         }
     }

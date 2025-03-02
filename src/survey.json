@@ -4,7 +4,7 @@
             "id": "gender",
             "type": "single_choice",
             "title": "Select your gender:",
-            "answers": [
+            "options": [
                 "Female",
                 "Male"
             ],
@@ -14,7 +14,7 @@
             "id": "partner",
             "type": "single_choice",
             "title": "So we can get to know you better, tell us about your relationship status.",
-            "answers": [
+            "options": [
                 "Single",
                 "In a relationship"
             ],
@@ -23,7 +23,7 @@
         {
             "id": "parent",
             "type": "single_choice",
-            "answers": [
+            "options": [
                 "Yes",
                 "No"
             ],
@@ -35,7 +35,7 @@
                             "Single"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Are you a single parent?"
                         }
@@ -47,7 +47,7 @@
                             "In a relationship"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Are you a parent?"
                         }
@@ -71,10 +71,10 @@
                             "Single"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Single Female who have children need a slightly different approach to improve their relationship. Which statement best describes you?",
-                            "answers": [
+                            "options": [
                                 "I’m very unhappy with how things are going in my relationship",
                                 "I’m unhappy with parts of my relationship, but some things are working well",
                                 "I’m generally happy in my relationship"
@@ -95,10 +95,10 @@
                             "Single"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Single Male who have children need a slightly different approach to improve their relationship. Which statement best describes you?",
-                            "answers": [
+                            "options": [
                                 "I’m very unhappy with how things are going in my relationship",
                                 "I’m unhappy with parts of my relationship, but some things are working well",
                                 "I’m generally happy in my relationship"
@@ -119,10 +119,10 @@
                             "Single"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Single Female need a slightly different approach to improve their relationship. Which statement best describes you?",
-                            "answers": [
+                            "options": [
                                 "I’m very unhappy with how things are going in my relationship",
                                 "I’m unhappy with parts of my relationship, but some things are working well",
                                 "I’m generally happy in my relationship"
@@ -143,10 +143,10 @@
                             "Single"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Single Male need a slightly different approach to improve their relationship. Which statement best describes you?",
-                            "answers": [
+                            "options": [
                                 "I’m very unhappy with how things are going in my relationship",
                                 "I’m unhappy with parts of my relationship, but some things are working well",
                                 "I’m generally happy in my relationship"
@@ -167,10 +167,10 @@
                             "In a relationship"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Female who have children need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
-                            "answers": [
+                            "options": [
                                 "I was unhappy with low things were going in my relationship",
                                 "I was unhappy with parts of my relationship, but some thing were working",
                                 "I was generally happy with my relationship",
@@ -192,10 +192,10 @@
                             "In a relationship"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Male who have children need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
-                            "answers": [
+                            "options": [
                                 "I was unhappy with low things were going in my relationship",
                                 "I was unhappy with parts of my relationship, but some thing were working",
                                 "I was generally happy with my relationship",
@@ -217,10 +217,10 @@
                             "In a relationship"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Female need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
-                            "answers": [
+                            "options": [
                                 "I was unhappy with low things were going in my relationship",
                                 "I was unhappy with parts of my relationship, but some thing were working",
                                 "I was generally happy with my relationship",
@@ -242,10 +242,10 @@
                             "In a relationship"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "title": "Male need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
-                            "answers": [
+                            "options": [
                                 "I was unhappy with low things were going in my relationship",
                                 "I was unhappy with parts of my relationship, but some thing were working",
                                 "I was generally happy with my relationship",
@@ -261,7 +261,7 @@
             "id": "partner-introvert-or-extrovert",
             "type": "single_choice",
             "title": "Is your partner an introvert or extrovert?",
-            "answers": [
+            "options": [
                 "Introvert",
                 "Extrovert",
                 "A bit of both"
@@ -272,7 +272,7 @@
             "id": "partner-gender",
             "type": "single_choice",
             "title": "What is your partner’s gender?",
-            "answers": [
+            "options": [
                 "Male",
                 "Female"
             ],
@@ -283,7 +283,7 @@
             "type": "single_choice",
             "title": "Do you agree with the statement below?",
             "subtitle": "“My partner and I make sex a priority in our relationship”",
-            "answers": [
+            "options": [
                 "Strongly agree",
                 "Agree",
                 "Neutral",
@@ -296,7 +296,7 @@
             "id": "think-about-relationship-goals",
             "type": "single_choice",
             "title": "When you think about your relationship goals, you feel...?",
-            "answers": [
+            "options": [
                 "Optimistic! They are totally doable, with some guidance.",
                 "Cautious. I’ve struggled before, but I’m hopeful.",
                 "I’m feeling a little anxious, honestly."
@@ -307,7 +307,7 @@
             "id": "overthink",
             "type": "single_choice",
             "title": "Do you tend to overthink?",
-            "answers": [
+            "options": [
                 "Yes",
                 "No"
             ],
@@ -315,12 +315,10 @@
         },
         {
             "id": "what_is",
-            "type": "single_choice",
+            "type": "text",
             "title": "So how does it work?",
-            "subtitle": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
-            "answers": [
-                "Next"
-            ],
+            "subtitle": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your options. We’re going to change your relationship with astrology.",
+            "theme": "colorfull",
             "configuration": [
                 {
                     "conditions": {
@@ -328,7 +326,7 @@
                             "Yes"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "next": "traits-most-important"
                         }
@@ -340,7 +338,7 @@
                             "No"
                         ]
                     },
-                    "options": [
+                    "values": [
                         {
                             "next": "traits-emotional-control"
                         }
@@ -352,7 +350,7 @@
             "id": "traits-emotional-control",
             "type": "single_choice",
             "title": "Is emotional control tricky for you?",
-            "answers": [
+            "options": [
                 "Yes",
                 "Sometimes",
                 "Rarely",
@@ -364,7 +362,7 @@
             "id": "traits-most-important",
             "type": "single_choice",
             "title": "What is most important to you?",
-            "answers": [
+            "options": [
                 "Success",
                 "Romance",
                 "Stability",
@@ -376,7 +374,7 @@
             "id": "relationship-about-us",
             "type": "end",
             "title": "Where did you hear about us?",
-            "answers": [
+            "options": [
                 "Poster or Billboard",
                 "Friend or Family",
                 "Instagram",

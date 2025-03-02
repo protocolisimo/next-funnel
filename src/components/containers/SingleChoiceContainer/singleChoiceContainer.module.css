@@ -1,0 +1,8 @@
+.container {
+    max-width: calc(360px - calc(var(--default-page-indent) * 2));
+    margin: 0 auto;
+    padding: 20px var(--default-page-indent);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
