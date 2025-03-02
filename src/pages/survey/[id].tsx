@@ -64,9 +64,16 @@ export default function SurveyPage({ screen }: { screen: SurveyLayoutProps }) {
     const dynamicParams = getDynamicParams(screen, answers);
 
     const handleAnswer = (answer?: string[] | string) => {
-        answer && dispatch(saveAnswer({ questionId: dynamicParams.id, answer: Array.isArray(answer) ? answer : [answer] }));
 
-        dynamicParams.type !== 'end' && router.push(`/survey/${dynamicParams.next || dynamicParams.next}`)
+        console.log(answer)
+        if (answer && (typeof answer === 'string' || typeof answer === typeof [''])) { // thats a should iether string aither array of strings
+            dispatch(saveAnswer({ questionId: dynamicParams.id, answer: Array.isArray(answer) ? answer : [answer] }));
+        }
+
+        if (surveyConfig.onboarding[surveyConfig.onboarding.length - 1].id !== dynamicParams.id) {
+            router.push(`/survey/${dynamicParams.next || dynamicParams.next}`)
+        }
+
     };
 
     return SURVAY_CONTAINERS_MAP[screen.type]({ params: dynamicParams, answers: answers?.[screen.id], handleAnswer: handleAnswer });
