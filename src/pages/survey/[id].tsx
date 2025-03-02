@@ -66,6 +66,9 @@ export default function SurveyPage({ screen }: { screen: SurveyLayoutProps }) {
         if (surveyConfig.onboarding[surveyConfig.onboarding.length - 1].id !== dynamicParams.id) {
             dispatch(addToHistory({ questionId: dynamicParams.id }))
             router.push(`/survey/${dynamicParams.next || dynamicParams.next}`)
+        } else {
+            console.log('Survey completed:', answers);
+            alert(`Survey completed: ⚫${Object.keys(answers).map((item) => `${item}: ${answers[item]}⚫`)}`);
         }
     };
 
