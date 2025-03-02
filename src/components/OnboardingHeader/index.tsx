@@ -1,7 +1,7 @@
 import styles from './onboardingHeader.module.css';
 import Icon from '../Icon';
 
-export type OnboardingHeaderPropsType = { onBackClickHandler: () => void };
+export type OnboardingHeaderPropsType = { onBackClickHandler?: () => void };
 
 const OnboardingHeader = ({ onBackClickHandler }: OnboardingHeaderPropsType) => {
     return (

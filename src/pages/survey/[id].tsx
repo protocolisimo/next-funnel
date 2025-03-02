@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import surveyConfig from "@/survey.json";
 import { RootState } from "@/store";
-import { saveAnswer } from "@/features/surveySlice";
+import { addToHistory, saveAnswer } from "@/features/surveySlice";
 import { getDynamicParams } from "@/lib/getDynamicQuestion";
 import SurveyLayout from "@/components/layouts/SurveyLayout";
 import SURVAY_CONTAINERS_MAP from "@/components/containers";
@@ -27,8 +27,6 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
     return { props: { screen } };
 }
 
-// add prietier
-
 export type SurveyLayoutProps = {
     id: string,
     type: keyof typeof SURVAY_CONTAINERS_MAP,
@@ -41,7 +39,6 @@ export type SurveyLayoutProps = {
 }
 
 export default function SurveyPage({ screen }: { screen: SurveyLayoutProps }) {
-    //ToDo: it would be grate to clean up here
     const router = useRouter();
     const dispatch = useDispatch();
     const answers = useSelector((state: RootState) => state.survey.answers);
@@ -52,7 +49,7 @@ export default function SurveyPage({ screen }: { screen: SurveyLayoutProps }) {
             dispatch(setTheme(screen.theme));
         }
         return () => {
-            dispatch(setTheme('black')); // make a var with default theme name
+            dispatch(setTheme('black'));
         }
     }, [screen, dispatch]);
 
@@ -63,17 +60,13 @@ export default function SurveyPage({ screen }: { screen: SurveyLayoutProps }) {
 
     const dynamicParams = getDynamicParams(screen, answers);
 
-    const handleAnswer = (answer?: string[] | string) => {
-
-        console.log(answer)
-        if (answer && (typeof answer === 'string' || typeof answer === typeof [''])) { // thats a should iether string aither array of strings
-            dispatch(saveAnswer({ questionId: dynamicParams.id, answer: Array.isArray(answer) ? answer : [answer] }));
-        }
+    const handleAnswer = (answer?: string[]) => {
+        dispatch(saveAnswer({ questionId: dynamicParams.id, answer }));
 
         if (surveyConfig.onboarding[surveyConfig.onboarding.length - 1].id !== dynamicParams.id) {
+            dispatch(addToHistory({ questionId: dynamicParams.id }))
             router.push(`/survey/${dynamicParams.next || dynamicParams.next}`)
         }
-
     };
 
     return SURVAY_CONTAINERS_MAP[screen.type]({ params: dynamicParams, answers: answers?.[screen.id], handleAnswer: handleAnswer });

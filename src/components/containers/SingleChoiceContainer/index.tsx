@@ -10,8 +10,8 @@ export type SingleChoiceContainerPropsType = {
         next: string;
         type: string;
     };
-    answers: string[]; // fix any
-    handleAnswer: (value: string[] | string) => void;
+    answers: string[];
+    handleAnswer: (value: string[]) => void;
 };
 
 export default function SingleChoiceContainer({ answers, params, handleAnswer }: SingleChoiceContainerPropsType) {

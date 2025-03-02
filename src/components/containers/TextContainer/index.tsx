@@ -16,7 +16,7 @@ export default function TextContainer({ params, handleAnswer }: TextContainerPro
         <div className={styles.container}>
             <Text type="title">{params.title}</Text>
             {params?.subtitle && <Text type="subtitle">{params.subtitle}</Text>}
-            <button className={styles.button} onClick={handleAnswer}>
+            <button className={styles.button} onClick={() => handleAnswer()}>
                 <Text modificator={['alternate']} type="buttonText">
                     Next
                 </Text>

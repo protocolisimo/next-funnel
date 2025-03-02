@@ -3,7 +3,7 @@ import TextContainer, { TextContainerPropsType } from './TextContainer';
 
 type ContainerComponent<T> = React.FC<T>;
 
-interface ContainerMap {
+type ContainerMap = {
     single_choice: ContainerComponent<SingleChoiceContainerPropsType>;
     text: ContainerComponent<TextContainerPropsType>;
 }

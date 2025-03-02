@@ -3,7 +3,7 @@ import styles from './optionBox.module.css';
 
 export type OptionBoxProps = {
     optionList: string[]; // add specific type
-    changeListChandler: (option: string | string[]) => void;
+    changeListChandler: (option: string[]) => void;
     pageType: string;
     values: string[];
 };
@@ -13,7 +13,7 @@ const OptionBox = ({ optionList, changeListChandler, pageType, values }: OptionB
     const handleChange = (data: string) => {
         if (pageType === 'single_choice') {
             setTimeout(() => {
-                changeListChandler && changeListChandler(data);
+                changeListChandler?.([data]);
             }, 100);
         } else {
             if (Array.isArray(values) && values?.includes(data)) {

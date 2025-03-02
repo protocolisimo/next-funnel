@@ -21,7 +21,7 @@ const SurveyLayout = ({ children }: { children: ReactNode }) => {
 
     return (
         <main>
-            <OnboardingHeader onBackClickHandler={handleGoBack} />
+            <OnboardingHeader onBackClickHandler={Boolean(history.length) ? handleGoBack : undefined} />
             {children}
         </main>
     );
