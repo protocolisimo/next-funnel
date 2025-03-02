@@ -9,12 +9,9 @@ export type OptionBoxProps = {
 };
 
 const OptionBox = ({ optionList, changeListChandler, pageType, values }: OptionBoxProps) => {
-    // refactore this peace
     const handleChange = (data: string) => {
         if (pageType === 'single_choice') {
-            setTimeout(() => {
-                changeListChandler?.([data]);
-            }, 100);
+            changeListChandler?.([data]);
         } else {
             if (Array.isArray(values) && values?.includes(data)) {
                 changeListChandler(values?.filter((i) => i !== data));
