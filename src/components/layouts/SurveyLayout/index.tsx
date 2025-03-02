@@ -1,4 +1,3 @@
-import SURVAY_CONTAINERS_MAP from '@/components/containers';
 import OnboardingHeader from '@/components/OnboardingHeader';
 import { goBack } from '@/features/surveySlice';
 import { RootState } from '@/store';

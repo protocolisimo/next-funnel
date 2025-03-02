@@ -4,7 +4,7 @@ import { store } from '@/store';
 import '@/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-    const getLayout = (Component as any).getLayout || ((page: React.ReactNode) => page);
+  const getLayout = (Component as any).getLayout || ((page: React.ReactNode) => page); // fix an any
 
-    return <Provider store={store}>{getLayout(<Component {...pageProps} />)}</Provider>;
+  return <Provider store={store}>{getLayout(<Component {...pageProps} />)}</Provider>;
 }

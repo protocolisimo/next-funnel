@@ -4,7 +4,7 @@ export const getDynamicParams = (screen: SurveyLayoutProps, answers: Record<stri
     let configuredScreen = { ...screen };
 
     if (screen?.configuration) {
-        let searchedOptions = screen.configuration.find((entity) => {
+        const searchedOptions = screen.configuration.find((entity) => {
             const conditionalKeys = Object.keys(entity.conditions);
 
             return conditionalKeys.every((conditionKey) => {

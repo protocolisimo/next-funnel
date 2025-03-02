@@ -10,7 +10,7 @@ export type SingleChoiceContainerPropsType = {
         next: string;
         type: string;
     };
-    answers: any;
+    answers: any; // fix any
     handleAnswer: (value: string[] | string) => void;
 };
 

@@ -1,7 +1,5 @@
 import styles from './onboardingHeader.module.css';
 import Icon from '../Icon';
-import ICONS from '../icons';
-import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store';
 

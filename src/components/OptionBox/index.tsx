@@ -1,6 +1,5 @@
 import Option from '@/components/Option';
 import styles from './optionBox.module.css';
-import { useEffect, useState } from 'react';
 
 export type OptionBoxProps = {
     optionList: string[]; // add specific type

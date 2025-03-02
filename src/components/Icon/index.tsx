@@ -6,15 +6,11 @@ import { RootState } from '../../store/index';
 export type IconPropsType = { iconName: keyof typeof ICONS; size?: { width: number; height: number } };
 
 function Icon({ iconName, size = { width: 24, height: 24 } }: IconPropsType) {
-    const theme = 'black'; // get the theme from the store
-
-    const theme2 = useSelector((state: RootState) => state.theme.mode);
-
-    console.log({ theme2 });
+    const theme = useSelector((state: RootState) => state.theme.mode);
 
     return (
         <Image
-            src={ICONS?.[theme2]?.[iconName]} // fix the types here
+            src={ICONS?.[theme]?.[iconName]} // fix the types here
             alt={iconName}
             color="white"
             {...size}
