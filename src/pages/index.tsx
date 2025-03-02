@@ -1,17 +1,17 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-import surveyConfig from "@/survey.json";
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import surveyConfig from '@/survey.json';
 
 const HomePage = () => {
-  const router = useRouter();
-  
-  useEffect(() => {
-    const firstQuestionId = surveyConfig.onboarding[0]?.id;
+    const router = useRouter();
 
-    router.replace(`/survey/${firstQuestionId}`);
-  }, [router]);
+    useEffect(() => {
+        const firstQuestionId = surveyConfig.onboarding[0]?.id;
 
-  return <div>App loader...</div>;
+        router.replace(`/survey/${firstQuestionId}`);
+    }, [router]);
+
+    return <div>App loader...</div>;
 };
 
 export default HomePage;

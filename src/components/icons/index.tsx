@@ -1,12 +1,12 @@
 const ICONS = {
-    'black': {
+    black: {
         back: '/assets/icons/black_back_icon.svg',
-        logo: '/assets/icons/logo_black.svg'
+        logo: '/assets/icons/logo_black.svg',
     },
-    'colorfull': {
+    colorfull: {
         back: '/assets/icons/white_back_icon.svg',
-        logo: '/assets/icons/logo_white.svg'
-    }
-}
+        logo: '/assets/icons/logo_white.svg',
+    },
+};
 
-export default ICONS
+export default ICONS;

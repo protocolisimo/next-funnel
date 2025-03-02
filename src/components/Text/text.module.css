@@ -1,6 +1,6 @@
 .base {
     color: var(--text-default-color);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .title {

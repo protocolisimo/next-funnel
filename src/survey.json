@@ -4,36 +4,25 @@
             "id": "gender",
             "type": "single_choice",
             "title": "Select your gender:",
-            "options": [
-                "Female",
-                "Male"
-            ],
+            "options": ["Female", "Male"],
             "next": "partner"
         },
         {
             "id": "partner",
             "type": "single_choice",
             "title": "So we can get to know you better, tell us about your relationship status.",
-            "options": [
-                "Single",
-                "In a relationship"
-            ],
+            "options": ["Single", "In a relationship"],
             "next": "parent"
         },
         {
             "id": "parent",
             "type": "single_choice",
-            "options": [
-                "Yes",
-                "No"
-            ],
+            "options": ["Yes", "No"],
             "next": "problem",
             "configuration": [
                 {
                     "conditions": {
-                        "partner": [
-                            "Single"
-                        ]
+                        "partner": ["Single"]
                     },
                     "values": [
                         {
@@ -43,9 +32,7 @@
                 },
                 {
                     "conditions": {
-                        "partner": [
-                            "In a relationship"
-                        ]
+                        "partner": ["In a relationship"]
                     },
                     "values": [
                         {
@@ -61,15 +48,9 @@
             "configuration": [
                 {
                     "conditions": {
-                        "parent": [
-                            "Yes"
-                        ],
-                        "gender": [
-                            "Female"
-                        ],
-                        "partner": [
-                            "Single"
-                        ]
+                        "parent": ["Yes"],
+                        "gender": ["Female"],
+                        "partner": ["Single"]
                     },
                     "values": [
                         {
@@ -85,15 +66,9 @@
                 },
                 {
                     "conditions": {
-                        "parent": [
-                            "Yes"
-                        ],
-                        "gender": [
-                            "Male"
-                        ],
-                        "partner": [
-                            "Single"
-                        ]
+                        "parent": ["Yes"],
+                        "gender": ["Male"],
+                        "partner": ["Single"]
                     },
                     "values": [
                         {
@@ -109,15 +84,9 @@
                 },
                 {
                     "conditions": {
-                        "parent": [
-                            "No"
-                        ],
-                        "gender": [
-                            "Female"
-                        ],
-                        "partner": [
-                            "Single"
-                        ]
+                        "parent": ["No"],
+                        "gender": ["Female"],
+                        "partner": ["Single"]
                     },
                     "values": [
                         {
@@ -133,15 +102,9 @@
                 },
                 {
                     "conditions": {
-                        "parent": [
-                            "No"
-                        ],
-                        "gender": [
-                            "Male"
-                        ],
-                        "partner": [
-                            "Single"
-                        ]
+                        "parent": ["No"],
+                        "gender": ["Male"],
+                        "partner": ["Single"]
                     },
                     "values": [
                         {
@@ -157,15 +120,9 @@
                 },
                 {
                     "conditions": {
-                        "parent": [
-                            "Yes"
-                        ],
-                        "gender": [
-                            "Female"
-                        ],
-                        "partner": [
-                            "In a relationship"
-                        ]
+                        "parent": ["Yes"],
+                        "gender": ["Female"],
+                        "partner": ["In a relationship"]
                     },
                     "values": [
                         {
@@ -182,15 +139,9 @@
                 },
                 {
                     "conditions": {
-                        "parent": [
-                            "Yes"
-                        ],
-                        "gender": [
-                            "Male"
-                        ],
-                        "partner": [
-                            "In a relationship"
-                        ]
+                        "parent": ["Yes"],
+                        "gender": ["Male"],
+                        "partner": ["In a relationship"]
                     },
                     "values": [
                         {
@@ -207,15 +158,9 @@
                 },
                 {
                     "conditions": {
-                        "parent": [
-                            "No"
-                        ],
-                        "gender": [
-                            "Female"
-                        ],
-                        "partner": [
-                            "In a relationship"
-                        ]
+                        "parent": ["No"],
+                        "gender": ["Female"],
+                        "partner": ["In a relationship"]
                     },
                     "values": [
                         {
@@ -232,15 +177,9 @@
                 },
                 {
                     "conditions": {
-                        "parent": [
-                            "No"
-                        ],
-                        "gender": [
-                            "Male"
-                        ],
-                        "partner": [
-                            "In a relationship"
-                        ]
+                        "parent": ["No"],
+                        "gender": ["Male"],
+                        "partner": ["In a relationship"]
                     },
                     "values": [
                         {
@@ -261,21 +200,14 @@
             "id": "partner-introvert-or-extrovert",
             "type": "single_choice",
             "title": "Is your partner an introvert or extrovert?",
-            "options": [
-                "Introvert",
-                "Extrovert",
-                "A bit of both"
-            ],
+            "options": ["Introvert", "Extrovert", "A bit of both"],
             "next": "partner-gender"
         },
         {
             "id": "partner-gender",
             "type": "single_choice",
             "title": "What is your partner’s gender?",
-            "options": [
-                "Male",
-                "Female"
-            ],
+            "options": ["Male", "Female"],
             "next": "partner-priority"
         },
         {
@@ -283,13 +215,7 @@
             "type": "single_choice",
             "title": "Do you agree with the statement below?",
             "subtitle": "“My partner and I make sex a priority in our relationship”",
-            "options": [
-                "Strongly agree",
-                "Agree",
-                "Neutral",
-                "Disagee",
-                "Strongly disagree"
-            ],
+            "options": ["Strongly agree", "Agree", "Neutral", "Disagee", "Strongly disagree"],
             "next": "think-about-relationship-goals"
         },
         {
@@ -307,10 +233,7 @@
             "id": "overthink",
             "type": "single_choice",
             "title": "Do you tend to overthink?",
-            "options": [
-                "Yes",
-                "No"
-            ],
+            "options": ["Yes", "No"],
             "next": "what_is"
         },
         {
@@ -322,9 +245,7 @@
             "configuration": [
                 {
                     "conditions": {
-                        "overthink": [
-                            "Yes"
-                        ]
+                        "overthink": ["Yes"]
                     },
                     "values": [
                         {
@@ -334,9 +255,7 @@
                 },
                 {
                     "conditions": {
-                        "overthink": [
-                            "No"
-                        ]
+                        "overthink": ["No"]
                     },
                     "values": [
                         {
@@ -350,24 +269,14 @@
             "id": "traits-emotional-control",
             "type": "single_choice",
             "title": "Is emotional control tricky for you?",
-            "options": [
-                "Yes",
-                "Sometimes",
-                "Rarely",
-                "Not at all"
-            ],
+            "options": ["Yes", "Sometimes", "Rarely", "Not at all"],
             "next": "relationship-about-us"
         },
         {
             "id": "traits-most-important",
             "type": "single_choice",
             "title": "What is most important to you?",
-            "options": [
-                "Success",
-                "Romance",
-                "Stability",
-                "Freedom"
-            ],
+            "options": ["Success", "Romance", "Stability", "Freedom"],
             "next": "relationship-about-us"
         },
         {

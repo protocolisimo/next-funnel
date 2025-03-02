@@ -1,10 +1,10 @@
 .container {
     padding: 20px 22px;
     width: 100%;
-    background: #EAEEF7;
-    border: 1px solid #E0E0E0;
+    background: #eaeef7;
+    border: 1px solid #e0e0e0;
     box-shadow: 2px 2px 6px 0px rgba(84, 60, 151, 0.25);
-    transition: .3s;
+    transition: 0.3s;
     cursor: pointer;
     border-radius: 15px;
     position: relative;
@@ -23,12 +23,12 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(165.54deg, #141333 -33.39%, #202261 15.89%, #543C97 55.84%, #6939A2 74.96%);
+    background: linear-gradient(165.54deg, #141333 -33.39%, #202261 15.89%, #543c97 55.84%, #6939a2 74.96%);
     border-radius: 15px;
-    transition: .3s;
+    transition: 0.3s;
     opacity: 0;
 }
 
-.active:after  {
+.active:after {
     opacity: 1;
 }
